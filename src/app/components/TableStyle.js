@@ -2,12 +2,14 @@ import styled from "styled-components";
 
 const Styles = styled.div`
   padding: 1rem;
+  .pagination {
+    margin: 0 auto;
+    text-align: center;
+    padding: 30px 0px;
+  }
   table {
     border-spacing: 0;
     border: 1px solid black;
-    .selected {
-      background-color: yellow;
-    }
     tr {
       :last-child {
         td {
@@ -20,7 +22,8 @@ const Styles = styled.div`
       input {
         background-color: bisque;
         border: none;
-        width: auto;
+        height: 30px;
+        width: 100%;
       }
       margin: 0;
       padding: 0.5rem;

@@ -13,18 +13,22 @@ const App = () => {
           {
             Header: "ID",
             accessor: "id",
+            width: 100,
           },
           {
             Header: "Username",
             accessor: "username",
+            width: 100,
           },
           {
             Header: "Name",
             accessor: "name",
+            width: 100,
           },
           {
             Header: "Email",
             accessor: "email",
+            width: 200,
           },
         ],
       },
@@ -34,25 +38,33 @@ const App = () => {
           {
             Header: "Creation Date",
             accessor: "creation_date",
+            disableSortBy: true,
           },
           {
             Header: "Expiration Date",
             accessor: "expiration_date",
+            disableSortBy: true,
           },
           {
             Header: "Authentication Approach",
             accessor: "authentication_approach",
+            disableSortBy: true,
           },
           {
             Header: "Role",
             accessor: "role",
+            width: 120,
+            disableSortBy: true,
           },
           {
             Header: "Working Group",
             accessor: "working_group",
+            disableSortBy: true,
           },
           {
             accessor: "[editButton]",
+            width: 50,
+            disableSortBy: true,
             Cell: (cellObj) => (
               <button onClick={() => handleClickEditRow(cellObj.row.index)}>
                 Edit
@@ -71,7 +83,7 @@ const App = () => {
     );
   };
 
-  const [data, setData] = useState(() => makeData(120));
+  const [data, setData] = useState(() => makeData(500));
   const [originalData] = useState(data);
   const updateMyData = (rowIndex, columnId, value) => {
     setData((old) =>
